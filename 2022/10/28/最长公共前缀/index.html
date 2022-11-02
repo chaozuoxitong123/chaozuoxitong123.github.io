@@ -16,12 +16,12 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="编写一个函数来查找字符串数组中的最长公共前缀。 如果不存在公共前缀，返回空字符串 &quot;&quot;。 示例 1： 12输入：strs &#x3D; [&quot;flower&quot;,&quot;flow&quot;,&quot;flight&quot;]输出：&quot;fl&quot;  示例 2： 123输入：strs &#x3D; [&quot;dog&quot;,&quot;racecar&amp;qu">
+    <meta name="description" content="编写一个函数来查找字符串数组中的最长公共前缀。 如果不存在公共前缀，返回空字符串 &quot;&quot;。 示例 1： 输入：strs &#x3D; [&quot;flower&quot;,&quot;flow&quot;,&quot;flight&quot;] 输出：&quot;fl&quot;  示例 2： 输入：strs &#x3D; [&quot;dog&quot;,&quot;race">
 <meta property="og:type" content="article">
 <meta property="og:title" content="最长公共前缀">
 <meta property="og:url" content="http://example.com/2022/10/28/%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%89%8D%E7%BC%80/index.html">
 <meta property="og:site_name" content="老马的博客">
-<meta property="og:description" content="编写一个函数来查找字符串数组中的最长公共前缀。 如果不存在公共前缀，返回空字符串 &quot;&quot;。 示例 1： 12输入：strs &#x3D; [&quot;flower&quot;,&quot;flow&quot;,&quot;flight&quot;]输出：&quot;fl&quot;  示例 2： 123输入：strs &#x3D; [&quot;dog&quot;,&quot;racecar&amp;qu">
+<meta property="og:description" content="编写一个函数来查找字符串数组中的最长公共前缀。 如果不存在公共前缀，返回空字符串 &quot;&quot;。 示例 1： 输入：strs &#x3D; [&quot;flower&quot;,&quot;flow&quot;,&quot;flight&quot;] 输出：&quot;fl&quot;  示例 2： 输入：strs &#x3D; [&quot;dog&quot;,&quot;race">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-10-28T08:59:26.000Z">
 <meta property="article:modified_time" content="2022-10-28T09:00:18.203Z">
@@ -39,6 +39,8 @@
   <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/prism/1.28.0/plugins/line-numbers/prism-line-numbers.min.css" />
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
 
@@ -218,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.8k 字
+          1.6k 字
         
       </span>
     
@@ -229,7 +231,7 @@
         
         
         
-          16 分钟
+          14 分钟
         
       </span>
     
@@ -275,10 +277,13 @@
                 <p>编写一个函数来查找字符串数组中的最长公共前缀。</p>
 <p>如果不存在公共前缀，返回空字符串 <code>&quot;&quot;</code>。</p>
 <p><strong>示例 1：</strong></p>
-<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs armasm">输入：<span class="hljs-keyword">strs</span> = [<span class="hljs-string">&quot;flower&quot;</span>,<span class="hljs-string">&quot;flow&quot;</span>,<span class="hljs-string">&quot;flight&quot;</span>]<br>输出：<span class="hljs-string">&quot;fl&quot;</span><br></code></pre></td></tr></table></figure>
+<figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">输入：strs &#x3D; [&quot;flower&quot;,&quot;flow&quot;,&quot;flight&quot;]
+输出：&quot;fl&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></div></figure>
 
 <p><strong>示例 2：</strong></p>
-<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs armasm">输入：<span class="hljs-keyword">strs</span> = [<span class="hljs-string">&quot;dog&quot;</span>,<span class="hljs-string">&quot;racecar&quot;</span>,<span class="hljs-string">&quot;car&quot;</span>]<br>输出：<span class="hljs-string">&quot;&quot;</span><br>解释：输入不存在公共前缀。<br></code></pre></td></tr></table></figure>
+<figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">输入：strs &#x3D; [&quot;dog&quot;,&quot;racecar&quot;,&quot;car&quot;]
+输出：&quot;&quot;
+解释：输入不存在公共前缀。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></div></figure>
 
 <p><strong>提示：</strong></p>
 <blockquote>
@@ -290,7 +295,66 @@
 </blockquote>
 <p>思路分析：如果是个空数组，直接返回空字符串。以第一个字符串作为标准，分别与后面的每个字符串进行比较。</p>
 <p>代码实现：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Iterator;<br><br><span class="hljs-comment">//题目链接：https://leetcode.cn/problems/longest-common-prefix/</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">T14</span> &#123;<br><br>	<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>		<span class="hljs-comment">// 测试一把</span><br>		<span class="hljs-type">Solution</span> <span class="hljs-variable">solution</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Solution</span>();<br>		String[] str = &#123; <span class="hljs-string">&quot;flower&quot;</span>,<span class="hljs-string">&quot;flow&quot;</span>,<span class="hljs-string">&quot;flowight&quot;</span>&#125;;<br>		<span class="hljs-type">String</span> <span class="hljs-variable">string</span> <span class="hljs-operator">=</span> solution.longestCommonPrefix(str);<br>		System.out.println(string);<br>	&#125;<br><br>&#125;<br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br>	<span class="hljs-keyword">public</span> String <span class="hljs-title function_">longestCommonPrefix</span><span class="hljs-params">(String[] strs)</span> &#123;<br>		<span class="hljs-keyword">if</span> (strs.length == <span class="hljs-number">0</span>) &#123;<span class="hljs-comment">//如果是个空数组，直接返回空字符串</span><br>			<span class="hljs-keyword">return</span> <span class="hljs-string">&quot;&quot;</span>;<br>		&#125;<br>		<span class="hljs-type">String</span> <span class="hljs-variable">ans</span> <span class="hljs-operator">=</span> strs[<span class="hljs-number">0</span>];<span class="hljs-comment">// 先把数组第一个字符串作为标准</span><br>		<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">1</span>; i &lt; strs.length; i++) &#123;<span class="hljs-comment">// 分别与后面的字符串进行比较</span><br>			<span class="hljs-type">int</span> <span class="hljs-variable">j</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>			<span class="hljs-comment">/**</span><br><span class="hljs-comment">			 *  int j = 0; =&gt; 这个写在外面是为了后面能够得到j的值,</span><br><span class="hljs-comment">			 *  从而得到在哪里有公共前缀，如果写在里面，一旦跳出for循环，将无法得到</span><br><span class="hljs-comment">			 *  公共前缀的坐标</span><br><span class="hljs-comment">			 */</span><br>			<span class="hljs-keyword">for</span> (; j &lt; ans.length() &amp;&amp; j &lt; strs[i].length(); j++) &#123;<br>				<span class="hljs-comment">/**</span><br><span class="hljs-comment">				 * j &lt; ans.length() &amp;&amp; j &lt; strs[i].length() =&gt; 比较的时候，总得</span><br><span class="hljs-comment">				 * 在两个要比较的字符串的长度内进行比较，更准确的说，应该是在</span><br><span class="hljs-comment">				 * 两个字符串中的较短的字符串长度内进行比较</span><br><span class="hljs-comment">				 */</span><br>			<br>				<span class="hljs-keyword">if</span> (ans.charAt(j) != strs[i].charAt(j)) &#123;<br>					<span class="hljs-comment">//只要发现有一个字符不匹配，则立即跳出循环</span><br>					<span class="hljs-keyword">break</span>;<br>				&#125;<br>			&#125;<br>			ans = ans.substring(<span class="hljs-number">0</span>, j);<span class="hljs-comment">//得到公共前缀</span><br>			<span class="hljs-comment">/**</span><br><span class="hljs-comment">			 * substring(int beginIndex, int endIndex)方法的作用：</span><br><span class="hljs-comment">			 * 返回一个新字符串，它是此字符串的一个子字符串。</span><br><span class="hljs-comment">			 * 该子字符串从指定的 beginIndex 处开始，直到索引 endIndex - 1 处的字符。</span><br><span class="hljs-comment">			 * 因此，该子字符串的长度为 endIndex-beginIndex。 </span><br><span class="hljs-comment">			示例： </span><br><span class="hljs-comment">			</span><br><span class="hljs-comment">			 &quot;hamburger&quot;.substring(4, 8) returns &quot;urge&quot;</span><br><span class="hljs-comment">			 &quot;smiles&quot;.substring(1, 5) returns &quot;mile&quot;</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">			 */</span><br>			<span class="hljs-keyword">if</span> (ans.equals(<span class="hljs-string">&quot;&quot;</span>)) &#123;<span class="hljs-comment">//如果发现没有公共前缀，则返回空字符串</span><br>				<span class="hljs-keyword">return</span> ans;<br>			&#125;<br><br>		&#125;<br>		<span class="hljs-keyword">return</span> ans;<span class="hljs-comment">//返回最终结果</span><br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure><div class="code-wrapper"><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Iterator</span></span><span class="token punctuation">;</span>
+
+<span class="token comment">//题目链接：https://leetcode.cn/problems/longest-common-prefix/</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">T14</span> <span class="token punctuation">&#123;</span>
+
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token comment">// 测试一把</span>
+		<span class="token class-name">Solution</span> solution <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Solution</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> str <span class="token operator">=</span> <span class="token punctuation">&#123;</span> <span class="token string">"flower"</span><span class="token punctuation">,</span><span class="token string">"flow"</span><span class="token punctuation">,</span><span class="token string">"flowight"</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+		<span class="token class-name">String</span> string <span class="token operator">=</span> solution<span class="token punctuation">.</span><span class="token function">longestCommonPrefix</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>string<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
+
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">&#123;</span>
+	<span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">longestCommonPrefix</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> strs<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>strs<span class="token punctuation">.</span>length <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token comment">//如果是个空数组，直接返回空字符串</span>
+			<span class="token keyword">return</span> <span class="token string">""</span><span class="token punctuation">;</span>
+		<span class="token punctuation">&#125;</span>
+		<span class="token class-name">String</span> ans <span class="token operator">=</span> strs<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment">// 先把数组第一个字符串作为标准</span>
+		<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> strs<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token comment">// 分别与后面的字符串进行比较</span>
+			<span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+			<span class="token comment">/**
+			 *  int j = 0; => 这个写在外面是为了后面能够得到j的值,
+			 *  从而得到在哪里有公共前缀，如果写在里面，一旦跳出for循环，将无法得到
+			 *  公共前缀的坐标
+			 */</span>
+			<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> ans<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> j <span class="token operator">&lt;</span> strs<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+				<span class="token comment">/**
+				 * j &lt; ans.length() &amp;&amp; j &lt; strs[i].length() => 比较的时候，总得
+				 * 在两个要比较的字符串的长度内进行比较，更准确的说，应该是在
+				 * 两个字符串中的较短的字符串长度内进行比较
+				 */</span>
+			
+				<span class="token keyword">if</span> <span class="token punctuation">(</span>ans<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>j<span class="token punctuation">)</span> <span class="token operator">!=</span> strs<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>j<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+					<span class="token comment">//只要发现有一个字符不匹配，则立即跳出循环</span>
+					<span class="token keyword">break</span><span class="token punctuation">;</span>
+				<span class="token punctuation">&#125;</span>
+			<span class="token punctuation">&#125;</span>
+			ans <span class="token operator">=</span> ans<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> j<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//得到公共前缀</span>
+			<span class="token comment">/**
+			 * substring(int beginIndex, int endIndex)方法的作用：
+			 * 返回一个新字符串，它是此字符串的一个子字符串。
+			 * 该子字符串从指定的 beginIndex 处开始，直到索引 endIndex - 1 处的字符。
+			 * 因此，该子字符串的长度为 endIndex-beginIndex。 
+			示例： 
+			
+			 "hamburger".substring(4, 8) returns "urge"
+			 "smiles".substring(1, 5) returns "mile"
+
+			 */</span>
+			<span class="token keyword">if</span> <span class="token punctuation">(</span>ans<span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token comment">//如果发现没有公共前缀，则返回空字符串</span>
+				<span class="token keyword">return</span> ans<span class="token punctuation">;</span>
+			<span class="token punctuation">&#125;</span>
+
+		<span class="token punctuation">&#125;</span>
+		<span class="token keyword">return</span> ans<span class="token punctuation">;</span><span class="token comment">//返回最终结果</span>
+	<span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
 
 
                 
@@ -559,6 +623,8 @@
   });
 </script>
 
+
+  <script  src="https://lib.baomitu.com/prism/1.28.0/plugins/line-numbers/prism-line-numbers.min.js" ></script>
 
   <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
 

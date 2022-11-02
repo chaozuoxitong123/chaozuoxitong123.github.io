@@ -44,6 +44,8 @@
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
 
+  <link  rel="stylesheet" href="https://lib.baomitu.com/prism/1.28.0/plugins/line-numbers/prism-line-numbers.min.css" />
+
   <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
 
 
@@ -222,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.1k 字
+          2.3k 字
         
       </span>
     
@@ -233,7 +235,7 @@
         
         
         
-          18 分钟
+          20 分钟
         
       </span>
     
@@ -290,7 +292,89 @@
 </ol>
 </blockquote>
 <p>代码实现：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br></pre></td><td class="code"><pre><code class="hljs Java"><span class="hljs-keyword">package</span> com.atguigu.sort;<br><br><span class="hljs-keyword">import</span> java.text.SimpleDateFormat;<br><br><span class="hljs-keyword">import</span> java.util.Date;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">QuickSort</span> &#123;<br><br>	<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>		<span class="hljs-comment">// int[] arr = &#123;-9,78,0,23,-567,70, -1,900, 4561&#125;;</span><br><br>		<span class="hljs-comment">// 测试快排的执行速度</span><br>		<span class="hljs-comment">// 创建要给80000个的随机的数组</span><br>		<span class="hljs-type">int</span>[] arr = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[<span class="hljs-number">8000000</span>];<br>		<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">8000000</span>; i++) &#123;<br>			arr[i] = (<span class="hljs-type">int</span>) (Math.random() * <span class="hljs-number">8000000</span>); <span class="hljs-comment">// 生成一个[0, 8000000) 数</span><br>		&#125;<br><br>		System.out.println(<span class="hljs-string">&quot;排序前&quot;</span>);<br>		<span class="hljs-type">Date</span> <span class="hljs-variable">data1</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>();<br>		<span class="hljs-type">SimpleDateFormat</span> <span class="hljs-variable">simpleDateFormat</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">SimpleDateFormat</span>(<span class="hljs-string">&quot;yyyy-MM-dd HH:mm:ss&quot;</span>);<br>		<span class="hljs-type">String</span> <span class="hljs-variable">date1Str</span> <span class="hljs-operator">=</span> simpleDateFormat.format(data1);<br>		System.out.println(<span class="hljs-string">&quot;排序前的时间是=&quot;</span> + date1Str);<br><br>		quickSort(arr, <span class="hljs-number">0</span>, arr.length - <span class="hljs-number">1</span>);<br><br>		<span class="hljs-type">Date</span> <span class="hljs-variable">data2</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>();<br>		<span class="hljs-type">String</span> <span class="hljs-variable">date2Str</span> <span class="hljs-operator">=</span> simpleDateFormat.format(data2);<br>		System.out.println(<span class="hljs-string">&quot;排序后的时间是=&quot;</span> + date2Str);<br>		<span class="hljs-comment">// System.out.println(&quot;arr=&quot; + Arrays.toString(arr));</span><br>	&#125;<br><br>	<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">quickSort</span><span class="hljs-params">(<span class="hljs-type">int</span>[] arr, <span class="hljs-type">int</span> left, <span class="hljs-type">int</span> right)</span> &#123;<br>		<span class="hljs-type">int</span> <span class="hljs-variable">l</span> <span class="hljs-operator">=</span> left;<span class="hljs-comment">// 左下标</span><br>		<span class="hljs-type">int</span> <span class="hljs-variable">r</span> <span class="hljs-operator">=</span> right;<span class="hljs-comment">// 右下标</span><br>		<span class="hljs-comment">// privot 中轴值</span><br>		<span class="hljs-type">int</span> <span class="hljs-variable">pivot</span> <span class="hljs-operator">=</span> arr[(left + right) / <span class="hljs-number">2</span>];<br>		<span class="hljs-type">int</span> <span class="hljs-variable">temp</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<span class="hljs-comment">// 临时变量，作为交换时使用</span><br>		<span class="hljs-comment">// while循环的目的是让比pivot值小放到左边</span><br>		<span class="hljs-comment">// 比pivot值大放到右边</span><br>		<span class="hljs-keyword">while</span> (l &lt; r) &#123;<br>			<span class="hljs-comment">// 在pivot的左边一直找，找到大于等于pivot值，才退出</span><br>			<span class="hljs-keyword">while</span> (arr[l] &lt; pivot) &#123;<br>				l += <span class="hljs-number">1</span>;<br>			&#125;<br>			<span class="hljs-comment">// 在pivot的右边一直找，找到小于等于pivot值，才退出</span><br>			<span class="hljs-keyword">while</span> (arr[r] &gt; pivot) &#123;<br>				r -= <span class="hljs-number">1</span>;<br>			&#125;<br>			<span class="hljs-comment">// 如果l &gt;= r说明pivot 的左右两的值，已经按照左边全部是</span><br>			<span class="hljs-comment">// 小于等于pivot值，右边全部是大于等于pivot值</span><br>			<span class="hljs-keyword">if</span> (l &gt;= r) &#123;<br>				<span class="hljs-keyword">break</span>;<br>			&#125;<br>			<span class="hljs-comment">// 交换</span><br>			temp = arr[l];<br>			arr[l] = arr[r];<br>			arr[r] = temp;<br><br>			<span class="hljs-comment">// 如果交换完后，发现这个arr[l]==pivot值相等 r--,前移</span><br>			<span class="hljs-keyword">if</span> (arr[l] == pivot) &#123;<br>				r -= <span class="hljs-number">1</span>;<br>			&#125;<br>			<span class="hljs-comment">// 如果交换完后，发现这个arr[r]==pivot值相等 l++,后移</span><br>			<span class="hljs-keyword">if</span> (arr[r] == pivot) &#123;<br>				l += <span class="hljs-number">1</span>;<br>			&#125;<br>		&#125;<br>		<span class="hljs-comment">// 如果l == r,必须l++,r--,否则会出现栈溢出</span><br>		<span class="hljs-keyword">if</span> (l == r) &#123;<br>			l += <span class="hljs-number">1</span>;<br>			r -= <span class="hljs-number">1</span>;<br>		&#125;<br>		<span class="hljs-comment">// 向左递归</span><br>		<span class="hljs-keyword">if</span> (left &lt; r) &#123;<br>			quickSort(arr, left, r);<br>		&#125;<br>		<span class="hljs-keyword">if</span> (right &gt; l) &#123;<br>			quickSort(arr, l, right);<br>		&#125;<br>	&#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+<figure><div class="code-wrapper"><pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">package com.atguigu.sort;
+
+import java.text.SimpleDateFormat;
+
+import java.util.Date;
+
+public class QuickSort &#123;
+
+	public static void main(String[] args) &#123;
+		&#x2F;&#x2F; int[] arr &#x3D; &#123;-9,78,0,23,-567,70, -1,900, 4561&#125;;
+
+		&#x2F;&#x2F; 测试快排的执行速度
+		&#x2F;&#x2F; 创建要给80000个的随机的数组
+		int[] arr &#x3D; new int[8000000];
+		for (int i &#x3D; 0; i &lt; 8000000; i++) &#123;
+			arr[i] &#x3D; (int) (Math.random() * 8000000); &#x2F;&#x2F; 生成一个[0, 8000000) 数
+		&#125;
+
+		System.out.println(&quot;排序前&quot;);
+		Date data1 &#x3D; new Date();
+		SimpleDateFormat simpleDateFormat &#x3D; new SimpleDateFormat(&quot;yyyy-MM-dd HH:mm:ss&quot;);
+		String date1Str &#x3D; simpleDateFormat.format(data1);
+		System.out.println(&quot;排序前的时间是&#x3D;&quot; + date1Str);
+
+		quickSort(arr, 0, arr.length - 1);
+
+		Date data2 &#x3D; new Date();
+		String date2Str &#x3D; simpleDateFormat.format(data2);
+		System.out.println(&quot;排序后的时间是&#x3D;&quot; + date2Str);
+		&#x2F;&#x2F; System.out.println(&quot;arr&#x3D;&quot; + Arrays.toString(arr));
+	&#125;
+
+	public static void quickSort(int[] arr, int left, int right) &#123;
+		int l &#x3D; left;&#x2F;&#x2F; 左下标
+		int r &#x3D; right;&#x2F;&#x2F; 右下标
+		&#x2F;&#x2F; privot 中轴值
+		int pivot &#x3D; arr[(left + right) &#x2F; 2];
+		int temp &#x3D; 0;&#x2F;&#x2F; 临时变量，作为交换时使用
+		&#x2F;&#x2F; while循环的目的是让比pivot值小放到左边
+		&#x2F;&#x2F; 比pivot值大放到右边
+		while (l &lt; r) &#123;
+			&#x2F;&#x2F; 在pivot的左边一直找，找到大于等于pivot值，才退出
+			while (arr[l] &lt; pivot) &#123;
+				l +&#x3D; 1;
+			&#125;
+			&#x2F;&#x2F; 在pivot的右边一直找，找到小于等于pivot值，才退出
+			while (arr[r] &gt; pivot) &#123;
+				r -&#x3D; 1;
+			&#125;
+			&#x2F;&#x2F; 如果l &gt;&#x3D; r说明pivot 的左右两的值，已经按照左边全部是
+			&#x2F;&#x2F; 小于等于pivot值，右边全部是大于等于pivot值
+			if (l &gt;&#x3D; r) &#123;
+				break;
+			&#125;
+			&#x2F;&#x2F; 交换
+			temp &#x3D; arr[l];
+			arr[l] &#x3D; arr[r];
+			arr[r] &#x3D; temp;
+
+			&#x2F;&#x2F; 如果交换完后，发现这个arr[l]&#x3D;&#x3D;pivot值相等 r--,前移
+			if (arr[l] &#x3D;&#x3D; pivot) &#123;
+				r -&#x3D; 1;
+			&#125;
+			&#x2F;&#x2F; 如果交换完后，发现这个arr[r]&#x3D;&#x3D;pivot值相等 l++,后移
+			if (arr[r] &#x3D;&#x3D; pivot) &#123;
+				l +&#x3D; 1;
+			&#125;
+		&#125;
+		&#x2F;&#x2F; 如果l &#x3D;&#x3D; r,必须l++,r--,否则会出现栈溢出
+		if (l &#x3D;&#x3D; r) &#123;
+			l +&#x3D; 1;
+			r -&#x3D; 1;
+		&#125;
+		&#x2F;&#x2F; 向左递归
+		if (left &lt; r) &#123;
+			quickSort(arr, left, r);
+		&#125;
+		if (right &gt; l) &#123;
+			quickSort(arr, l, right);
+		&#125;
+	&#125;
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
 
 <p>运行截图：</p>
 <p><img src="https://raw.githubusercontent.com/chaozuoxitong123/tuchuang/main/img202210281042394.png" srcset="/img/loading.gif" lazyload alt="image-20221001210112911"></p>
@@ -562,6 +646,8 @@
   });
 </script>
 
+
+  <script  src="https://lib.baomitu.com/prism/1.28.0/plugins/line-numbers/prism-line-numbers.min.js" ></script>
 
   <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
 
