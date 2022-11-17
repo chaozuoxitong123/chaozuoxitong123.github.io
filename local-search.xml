@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>浏览器缓存的坑</title>
+    <link href="/2022/11/17/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98%E7%9A%84%E5%9D%91/"/>
+    <url>/2022/11/17/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98%E7%9A%84%E5%9D%91/</url>
+    
+    <content type="html"><![CDATA[<h3 id="浏览器缓存的坑"><a href="#浏览器缓存的坑" class="headerlink" title="浏览器缓存的坑"></a>浏览器缓存的坑</h3><p>今天我在替换javaweb项目中的图片的时候，替换后再次运行居然发现图片没有变化，后来知道是浏览器的缓存的原因。</p><p>清理缓存步骤如下：（以谷歌浏览器为例）</p><blockquote><p>1.点击右上角三个点,点击更多工具，点击清除浏览数据</p></blockquote><p><img src="https://raw.githubusercontent.com/chaozuoxitong123/tuchuang/main/img202211172053433.png" alt="image-20221117205350848"></p><blockquote><p>2.点击清除数据</p></blockquote><p><img src="https://raw.githubusercontent.com/chaozuoxitong123/tuchuang/main/img202211172055623.png" alt="image-20221117205554745"></p><p>即可显示正确的图片</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>坑</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>目录的坑</title>
     <link href="/2022/11/17/%E7%9B%AE%E5%BD%95%E7%9A%84%E5%9D%91/"/>
     <url>/2022/11/17/%E7%9B%AE%E5%BD%95%E7%9A%84%E5%9D%91/</url>
