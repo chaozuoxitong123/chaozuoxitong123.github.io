@@ -16,30 +16,30 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="今天聊一个简单的问题，增加更多内存会让你的计算机速度变快吗？ 要想解答这个问题，我们需要知道cpu、内存与程序这几者的关联，实际上非常简单：  首先，可执行程序存储在磁盘中(当然也可以是其它介质)，可执行程序中实际上主要包含两部分内容：机器指令以及指令依赖的数据； 程序运行时首先被加载(load)到内存中，被加载到内存中的程序摇身一变就成为了我们说的进程，当然，内存中还运行着另一种特殊的程序：操作">
+    <meta name="description" content="javaweb项目启动奇怪的错误1.今天导入javaweb项目时，启动tomcat后，出现无效的源发行版：16，修正如下：  这里改为8就可以了 2.出现莫名其妙的错误，明明有这个类和方法，却显示 Cannot resolve symbol xxxxx,这很可能是idea缓存的原因。修正： 点击File | Invalidate Caches，清理了缓存重启IDEA就可以了。  3.启动tomca">
 <meta property="og:type" content="article">
-<meta property="og:title" content="增加内存会让计算机变快吗">
-<meta property="og:url" content="http://example.com/2022/11/19/%E5%A2%9E%E5%8A%A0%E5%86%85%E5%AD%98%E4%BC%9A%E8%AE%A9%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8F%98%E5%BF%AB%E5%90%97/index.html">
+<meta property="og:title" content="javaweb项目启动奇怪的错误">
+<meta property="og:url" content="http://example.com/2022/11/22/javaweb%E9%A1%B9%E7%9B%AE%E5%90%AF%E5%8A%A8%E5%A5%87%E6%80%AA%E7%9A%84%E9%94%99%E8%AF%AF/index.html">
 <meta property="og:site_name" content="老马的博客">
-<meta property="og:description" content="今天聊一个简单的问题，增加更多内存会让你的计算机速度变快吗？ 要想解答这个问题，我们需要知道cpu、内存与程序这几者的关联，实际上非常简单：  首先，可执行程序存储在磁盘中(当然也可以是其它介质)，可执行程序中实际上主要包含两部分内容：机器指令以及指令依赖的数据； 程序运行时首先被加载(load)到内存中，被加载到内存中的程序摇身一变就成为了我们说的进程，当然，内存中还运行着另一种特殊的程序：操作">
+<meta property="og:description" content="javaweb项目启动奇怪的错误1.今天导入javaweb项目时，启动tomcat后，出现无效的源发行版：16，修正如下：  这里改为8就可以了 2.出现莫名其妙的错误，明明有这个类和方法，却显示 Cannot resolve symbol xxxxx,这很可能是idea缓存的原因。修正： 点击File | Invalidate Caches，清理了缓存重启IDEA就可以了。  3.启动tomca">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://raw.githubusercontent.com/chaozuoxitong123/tuchuang/main/img202211191924994.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/chaozuoxitong123/tuchuang/main/img202211191925927.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/chaozuoxitong123/tuchuang/main/img202211191925184.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/chaozuoxitong123/tuchuang/main/img202211191925757.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/chaozuoxitong123/tuchuang/main/img202211191926474.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/chaozuoxitong123/tuchuang/main/img202211191925907.png">
-<meta property="article:published_time" content="2022-11-19T11:23:25.000Z">
-<meta property="article:modified_time" content="2022-11-19T11:27:39.941Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/chaozuoxitong123/tuchuang/main/img202211221126816.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/chaozuoxitong123/tuchuang/main/img202211221129139.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/chaozuoxitong123/tuchuang/main/img202211221152839.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/chaozuoxitong123/tuchuang/main/img202211221153039.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/chaozuoxitong123/tuchuang/main/img202211221153412.png">
+<meta property="og:image" content="https://img2018.cnblogs.com/blog/1423979/201906/1423979-20190604222717586-949332043.png">
+<meta property="article:published_time" content="2022-11-22T03:17:53.000Z">
+<meta property="article:modified_time" content="2022-11-22T03:56:40.473Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/chaozuoxitong123/tuchuang/main/img202211191924994.png">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/chaozuoxitong123/tuchuang/main/img202211221126816.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>增加内存会让计算机变快吗 - 老马的博客</title>
+  <title>javaweb项目启动奇怪的错误 - 老马的博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -206,7 +206,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="增加内存会让计算机变快吗"></span>
+            <span id="subtitle" data-typed-text="javaweb项目启动奇怪的错误"></span>
           
         </div>
 
@@ -222,8 +222,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-11-19 19:23" pubdate>
-          2022年11月19日 晚上
+        <time datetime="2022-11-22 11:17" pubdate>
+          2022年11月22日 上午
         </time>
       </span>
     
@@ -234,7 +234,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.6k 字
+          382 字
         
       </span>
     
@@ -245,7 +245,7 @@
         
         
         
-          14 分钟
+          4 分钟
         
       </span>
     
@@ -291,40 +291,32 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">增加内存会让计算机变快吗</h1>
+            <h1 style="display: none">javaweb项目启动奇怪的错误</h1>
             
             
               <div class="markdown-body">
                 
-                <p>今天聊一个简单的问题，增加更多内存会让你的计算机速度变快吗？</p>
-<p>要想解答这个问题，我们需要知道cpu、内存与程序这几者的关联，实际上非常简单：</p>
-<p><img src="https://raw.githubusercontent.com/chaozuoxitong123/tuchuang/main/img202211191924994.png" srcset="/img/loading.gif" lazyload alt="图片"></p>
-<p>首先，可执行程序存储在磁盘中(当然也可以是其它介质)，可执行程序中实际上主要包含两部分内容：机器指令以及指令依赖的数据；</p>
-<p>程序运行时首先被加载(load)到内存中，被加载到内存中的程序摇身一变就成为了我们说的进程，当然，内存中还运行着另一种特殊的程序：操作系统。</p>
-<p>只有当CPU真正执行机器指令时相应的进程才开始运行，此时CPU不断的从内存中取出指令并执行指令，当然除了机器指令外还需要读取内存中的数据。</p>
-<p>可以看到，当程序运行时与CPU交互的是内存而不是磁盘，内存中存储指令和数据、而CPU使用指令和数据，因此从这个角度看这是一个类似生产者与消费者问题，内存就好比大厨、CPU好比食客，如果大厨上菜太慢那么食客就要挨饿。</p>
-<p><img src="https://raw.githubusercontent.com/chaozuoxitong123/tuchuang/main/img202211191925927.png" srcset="/img/loading.gif" lazyload alt="图片"></p>
-<p>除此之外，<strong>操作系统</strong>对内存的使用也不可忽略。</p>
-<h5 id="操作系统是如何利用内存的？"><a href="#操作系统是如何利用内存的？" class="headerlink" title="操作系统是如何利用内存的？"></a><strong>操作系统是如何利用内存的？</strong></h5><p>为充分利用内存与磁盘资源，现代操作系统中有很多非常聪明的设计。</p>
-<p>由于CPU一次只能运行一个程序，即使在多核系统中一般来说同时存在的进程数远远多于核数，也就是说在某一个时刻并不是所有的程序都在运行，即使对正在运行的进程来说由于局部性原理的存在，进程地址空间中总会有一部分指令或者数据是暂时用不到的。</p>
-<p>基于这些，操作系统先驱们看到了可以充分利用内存的机会，我们可以将暂时用不到的指令或者数据放到磁盘上去(swap out)，当使用这些数据或者指令时再从磁盘加载到内存中(swap in)，这样内存中不就有更多空间运行更多进程了吗，这种思想在操作系统中被称之为demand paging，属于虚拟内存的一部分。</p>
-<p><img src="https://raw.githubusercontent.com/chaozuoxitong123/tuchuang/main/img202211191925184.png" srcset="/img/loading.gif" lazyload alt="图片"></p>
-<p>其次，操作系统会将剩余的空闲内存当做磁盘缓存，有时当系统负载较低时我们的程序并不能充分利用内存，那么这些空闲的内存就真的毫无用处了吗？显然不是的，我们知道磁盘是一种低速的存储设备，既然这样为什么不把空闲的物理内存当做磁盘的缓存呢？</p>
-<p>大家可能都有这样的体验，开始打开一个全新的文件时通常会比较慢，但当你再次使用该文件时将明显感觉到速度会快很多，背后的原理就在于此，如果此时你的内存不足，那么操作系统就没有那么多的空闲内存来当做磁盘缓存，此时你将真正体验到磁盘蜗牛般的速度。</p>
-<p><img src="https://raw.githubusercontent.com/chaozuoxitong123/tuchuang/main/img202211191925757.png" srcset="/img/loading.gif" lazyload alt="图片"></p>
-<p>现在，我们就可以回答开始提出的问题了，增加内存会加快计算机运行速度吗？显然这样分为两种情况来讨论。</p>
-<h5 id="内存充足"><a href="#内存充足" class="headerlink" title="内存充足"></a><strong>内存充足</strong></h5><p>如果你的内存本身就很充足，那么在这种情况下<strong>增加更多内存将不会让你的计算机跑的更快</strong>，因为CPU作为食客吃饭的速度是有限的，大厨做的菜再多也没有，你也没办法让食客吃的再快一些。</p>
-<p>这就好比你问给一辆卡车装更多轮子会让开车跑得更快吗？</p>
-<p>答案显然不是的，尽管这并不能让卡车跑得更快，但增加更多轮子会让货车有更高的载重。</p>
-<p><img src="https://raw.githubusercontent.com/chaozuoxitong123/tuchuang/main/img202211191926474.png" srcset="/img/loading.gif" lazyload alt="图片"></p>
-<p>对内存来说也是这样，尽管增加更多内存并不能让计算机跑得更快，但这显然会让我们可以同时运行更多程序。</p>
-<p>增加更多内存意味着你可以同时开启更多浏览器网页、可以同时开启更多虚拟机、同时渲染更多高清视频、同时处理更多复杂的3D模型、同时训练更多机器学习模型等等，此时你的内存不是瓶颈，CPU将很可能成为瓶颈，因为CPU的运行速度也就是每秒内执行的机器指令数量是有限的。</p>
-<h5 id="内存不足"><a href="#内存不足" class="headerlink" title="内存不足"></a><strong>内存不足</strong></h5><p>此时大厨上菜速度太慢，食客总是挨饿，因此大厨需要上更多的菜。</p>
-<p><img src="https://raw.githubusercontent.com/chaozuoxitong123/tuchuang/main/img202211191925907.png" srcset="/img/loading.gif" lazyload alt="图片"></p>
-<p>我们知道，大部分程序在运行过程中会频繁的申请内存，申请内存是一项看似简单实际上非常复杂的操作、尤其是在系统内存不足的场景下，此时申请内存往往涉及到更多复杂的查找或者异常处理，这时我们的程序运行速度将会明显变慢。</p>
-<p>内存不足时磁盘与内存之间可能会有更多的交换，此时系统的速度将受限于磁盘，并且由于不能缓存磁盘文件， 那么我们开启进程或者打开文件的速度将明显变慢。</p>
-<p>在这种情况下增加内存将更好地喂饱CPU，因此将明显加快计算机的运行速度。</p>
-<h5 id="总结"><a href="#总结" class="headerlink" title="总结"></a><strong>总结</strong></h5><p>从上述分析我们知道，关于增加内存是否可以加快计算机速度取决于你的场景，如果你的设备内存充足，那么此时增加内存不会明显加快计算机运行速度。</p>
+                <h3 id="javaweb项目启动奇怪的错误"><a href="#javaweb项目启动奇怪的错误" class="headerlink" title="javaweb项目启动奇怪的错误"></a>javaweb项目启动奇怪的错误</h3><p>1.今天导入javaweb项目时，启动tomcat后，出现无效的源发行版：16，修正如下：</p>
+<p><img src="https://raw.githubusercontent.com/chaozuoxitong123/tuchuang/main/img202211221126816.png" srcset="/img/loading.gif" lazyload alt="image-20221122112649834"></p>
+<p>这里改为8就可以了</p>
+<p>2.出现莫名其妙的错误，明明有这个类和方法，却显示 Cannot resolve symbol xxxxx,这很可能是idea缓存的原因。修正：</p>
+<p>点击File | Invalidate Caches，清理了缓存重启IDEA就可以了。</p>
+<p><img src="https://raw.githubusercontent.com/chaozuoxitong123/tuchuang/main/img202211221129139.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>3.启动tomcat的时候报错：</p>
+<p>   not found for the web module</p>
+<p><img src="https://raw.githubusercontent.com/chaozuoxitong123/tuchuang/main/img202211221152839.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>解决方法：</p>
+<p>  1、设置正确的web.xml路径</p>
+<p> <img src="https://raw.githubusercontent.com/chaozuoxitong123/tuchuang/main/img202211221153039.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>  2、创建war包和web包在artifacts中</p>
+<p> <img src="https://raw.githubusercontent.com/chaozuoxitong123/tuchuang/main/img202211221153412.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<ol start="3">
+<li></li>
+</ol>
+<p><img src="https://img2018.cnblogs.com/blog/1423979/201906/1423979-20190604222717586-949332043.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p> 在重新运行Tomcat的时候还会报错, 说是unnamed.war包已经失效</p>
+<p><strong>然后将原来的war包删除, 重新导入新建的war包</strong>, 问题解决!</p>
+<p>参考：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/zjulanjian/p/10976666.html">https://www.cnblogs.com/zjulanjian/p/10976666.html</a></p>
 
                 
               </div>
@@ -343,7 +335,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6/" class="category-chain-item">计算机硬件</a>
+  <a href="/categories/%E5%9D%91/" class="category-chain-item">坑</a>
   
   
 
@@ -363,8 +355,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>增加内存会让计算机变快吗</div>
-      <div>http://example.com/2022/11/19/增加内存会让计算机变快吗/</div>
+      <div>javaweb项目启动奇怪的错误</div>
+      <div>http://example.com/2022/11/22/javaweb项目启动奇怪的错误/</div>
     </div>
     <div class="license-meta">
       
@@ -376,7 +368,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年11月19日</div>
+          <div>2022年11月22日</div>
         </div>
       
       
@@ -408,18 +400,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/11/22/javaweb%E9%A1%B9%E7%9B%AE%E5%90%AF%E5%8A%A8%E5%A5%87%E6%80%AA%E7%9A%84%E9%94%99%E8%AF%AF/" title="javaweb项目启动奇怪的错误">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">javaweb项目启动奇怪的错误</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/11/18/sql%E6%96%87%E4%BB%B6%E5%AF%BC%E5%85%A5navicat-1273%E9%97%AE%E9%A2%98/" title="sql文件导入navicat_1273问题">
-                        <span class="hidden-mobile">sql文件导入navicat_1273问题</span>
+                      <a href="/2022/11/19/%E5%A2%9E%E5%8A%A0%E5%86%85%E5%AD%98%E4%BC%9A%E8%AE%A9%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8F%98%E5%BF%AB%E5%90%97/" title="增加内存会让计算机变快吗">
+                        <span class="hidden-mobile">增加内存会让计算机变快吗</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

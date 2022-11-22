@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>javaweb项目启动奇怪的错误</title>
+    <link href="/2022/11/22/javaweb%E9%A1%B9%E7%9B%AE%E5%90%AF%E5%8A%A8%E5%A5%87%E6%80%AA%E7%9A%84%E9%94%99%E8%AF%AF/"/>
+    <url>/2022/11/22/javaweb%E9%A1%B9%E7%9B%AE%E5%90%AF%E5%8A%A8%E5%A5%87%E6%80%AA%E7%9A%84%E9%94%99%E8%AF%AF/</url>
+    
+    <content type="html"><![CDATA[<h3 id="javaweb项目启动奇怪的错误"><a href="#javaweb项目启动奇怪的错误" class="headerlink" title="javaweb项目启动奇怪的错误"></a>javaweb项目启动奇怪的错误</h3><p>1.今天导入javaweb项目时，启动tomcat后，出现无效的源发行版：16，修正如下：</p><p><img src="https://raw.githubusercontent.com/chaozuoxitong123/tuchuang/main/img202211221126816.png" alt="image-20221122112649834"></p><p>这里改为8就可以了</p><p>2.出现莫名其妙的错误，明明有这个类和方法，却显示 Cannot resolve symbol xxxxx,这很可能是idea缓存的原因。修正：</p><p>点击File | Invalidate Caches，清理了缓存重启IDEA就可以了。</p><p><img src="https://raw.githubusercontent.com/chaozuoxitong123/tuchuang/main/img202211221129139.png" alt="img"></p><p>3.启动tomcat的时候报错：</p><p>   not found for the web module</p><p><img src="https://raw.githubusercontent.com/chaozuoxitong123/tuchuang/main/img202211221152839.png" alt="img"></p><p>解决方法：</p><p>  1、设置正确的web.xml路径</p><p> <img src="https://raw.githubusercontent.com/chaozuoxitong123/tuchuang/main/img202211221153039.png" alt="img"></p><p>  2、创建war包和web包在artifacts中</p><p> <img src="https://raw.githubusercontent.com/chaozuoxitong123/tuchuang/main/img202211221153412.png" alt="img"></p><ol start="3"><li></li></ol><p><img src="https://img2018.cnblogs.com/blog/1423979/201906/1423979-20190604222717586-949332043.png" alt="img"></p><p> 在重新运行Tomcat的时候还会报错, 说是unnamed.war包已经失效</p><p><strong>然后将原来的war包删除, 重新导入新建的war包</strong>, 问题解决!</p><p>参考：<a href="https://www.cnblogs.com/zjulanjian/p/10976666.html">https://www.cnblogs.com/zjulanjian/p/10976666.html</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>坑</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>增加内存会让计算机变快吗</title>
     <link href="/2022/11/19/%E5%A2%9E%E5%8A%A0%E5%86%85%E5%AD%98%E4%BC%9A%E8%AE%A9%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8F%98%E5%BF%AB%E5%90%97/"/>
     <url>/2022/11/19/%E5%A2%9E%E5%8A%A0%E5%86%85%E5%AD%98%E4%BC%9A%E8%AE%A9%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8F%98%E5%BF%AB%E5%90%97/</url>
