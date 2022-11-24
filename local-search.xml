@@ -4,6 +4,63 @@
   
   
   <entry>
+    <title>控制台乱码</title>
+    <link href="/2022/11/24/%E6%8E%A7%E5%88%B6%E5%8F%B0%E4%B9%B1%E7%A0%81/"/>
+    <url>/2022/11/24/%E6%8E%A7%E5%88%B6%E5%8F%B0%E4%B9%B1%E7%A0%81/</url>
+    
+    <content type="html"><![CDATA[<h3 id="控制台出现乱码"><a href="#控制台出现乱码" class="headerlink" title="控制台出现乱码"></a>控制台出现乱码</h3><p>今天在运行javaweb项目的时候，在控制台打印信息，出现了乱码，解决方法如下：</p><p>在tomcat配置的VM options:中填入：-Dfile.encoding=UTF-8，即可解决这个问题。</p><p><img src="https://raw.githubusercontent.com/chaozuoxitong123/tuchuang/main/img202211241759531.png" alt="image-20221124175909784"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>坑</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>搜索方法</title>
+    <link href="/2022/11/24/%E6%90%9C%E7%B4%A2%E6%96%B9%E6%B3%95/"/>
+    <url>/2022/11/24/%E6%90%9C%E7%B4%A2%E6%96%B9%E6%B3%95/</url>
+    
+    <content type="html"><![CDATA[<p>对程序员来说，搜索引擎肯定是日常工作中是不可或缺，很多人戏谑自己是面向 <strong>搜索引擎编程</strong></p><p>遇到困难，去网上搜答案这个行为没错，我相信我肯定不是第一个遇到这个难题的，网上找找前辈是怎么解决</p><p>但你发现没有，有的人很快就找到解决方案，而有的人查了半天，东一榔头西一锄头，总是不得精要。</p><p>要知道，这个世上任何事情都是有方法论，<strong>就算「查资料」这么简单的事也不例外</strong>，抓住了窍门，才能快速达成目标</p><p>今天，就给大家分享「如何使用 Google，让你更快找到想要的信息！」，下面给你介绍 <strong>11 个</strong> 技巧</p><h3 id="1、匹配多个关键字"><a href="#1、匹配多个关键字" class="headerlink" title="1、匹配多个关键字"></a><strong>1、匹配多个关键字</strong></h3><p>如果你搜索的内容包含多个关键词，<strong>中间可以用「空格」来分隔</strong>。当然有些技术同学喜欢用 「and」，效果差不多</p><p><img src="https://raw.githubusercontent.com/chaozuoxitong123/tuchuang/main/img202211241753195.png" alt="图片"></p><h3 id="2、匹配一个关键字"><a href="#2、匹配一个关键字" class="headerlink" title="2、匹配一个关键字"></a><strong>2、匹配一个关键字</strong></h3><p>如果搜索的多个关键词只需包含其中一个即可，<strong>可以使用 「<strong><strong>竖线</strong></strong>」</strong>，例如：“微观技术 |  Tom哥”</p><p>我们看到搜索的结果比较多，很多都是无关的。这种模式适合一些资料比较少的场景，广撒网找灵感。</p><p><img src="https://raw.githubusercontent.com/chaozuoxitong123/tuchuang/main/img202211241753591.png" alt="图片"></p><h3 id="3、精确搜索"><a href="#3、精确搜索" class="headerlink" title="3、精确搜索"></a><strong>3、精确搜索</strong></h3><p>搜索引擎之索引能从海量的资料中快速查找到我们需要的信息，是因为采用了倒排索引。将一篇文章提前做了分词，然后对每个词语做反向关联文档。</p><p>查找时，关键词也会先分词，用多个词语并行去查询，再将返回结果去重合并、评分，按分数的高低排序后返回给我们。</p><p>任何事物都是有两面性，有时关闭分词更有利于快速检索结果。<strong>我们可以采用 「双引号」将关键词包裹起来，</strong>这样搜索出来的就是包含完整这段话的页面</p><p><img src="https://raw.githubusercontent.com/chaozuoxitong123/tuchuang/main/img202211241753468.png" alt="图片"></p><h3 id="4、模糊搜索"><a href="#4、模糊搜索" class="headerlink" title="4、模糊搜索"></a><strong>4、模糊搜索</strong></h3><p>如果我们搜索时，忘了单词怎么写了，<strong>可以后面加「*」</strong>，比如：git comi*</p><p><img src="https://mmbiz.qpic.cn/mmbiz_png/2KTof9YshwcMslzt0HH4U6zzh93aVxTFPgzm8Baoz1KoD4Xgr459WkicMKTP2MnxbFNErf5ENCPHxPWm2iaxzvcg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p><h3 id="5、排除干扰"><a href="#5、排除干扰" class="headerlink" title="5、排除干扰"></a><strong>5、排除干扰</strong></h3><p>我们的搜索结果有很多内容是我们明确不想要的，我们可以对查询结果再做一层过滤。<strong>采用「减号」后面跟关键词</strong></p><p><img src="https://raw.githubusercontent.com/chaozuoxitong123/tuchuang/main/img202211241753787.png" alt="图片"></p><p>特别注意：减号前面有空格，后面没有空格，直接拼接搜索词。这种方式可以进一步精简搜索结果，避开很多干扰信息。</p><p><img src="https://raw.githubusercontent.com/chaozuoxitong123/tuchuang/main/img202211241753613.png" alt="图片"></p><h3 id="6、限标题搜"><a href="#6、限标题搜" class="headerlink" title="6、限标题搜"></a><strong>6、限标题搜</strong></h3><p>一般搜索时，只要文章中有这个关键词都能被搜出来，不管是标题还是正文。如果只想搜索标题含有这个关键词，可以在搜索词前面加个指令，<strong>比如  intitle:关键词，</strong></p><p><img src="https://raw.githubusercontent.com/chaozuoxitong123/tuchuang/main/img202211241753803.png" alt="图片"></p><h3 id=""><a href="#" class="headerlink" title=""></a></h3><h3 id="7、限某网站搜"><a href="#7、限某网站搜" class="headerlink" title="7、限某网站搜"></a><strong>7、限某网站搜</strong></h3><p>搜索是个好东西，极大提升我们查找资料的效率，很多垂直网站也都配置了站内搜索，提高用户体验。</p><p>但是有些网站没有搜索功能怎么办？</p><p>教你一招，<strong>通过这个格式：关键词 site:网站域名。比如：高并发 site:csdn.net，那等同在 CSDN 这个站点内搜索「高并发」关键词</strong></p><p><img src="https://raw.githubusercontent.com/chaozuoxitong123/tuchuang/main/img202211241753540.png" alt="图片"></p><h3 id="8、搜索-pdf-文件"><a href="#8、搜索-pdf-文件" class="headerlink" title="8、搜索 pdf 文件"></a><strong>8、搜索 pdf 文件</strong></h3><p>如果你想定向搜索某一类型的文件，<strong>可以在搜索词后面拼接  filetype:pdf，比如：</strong>「“微博”  “高并发”  filetype:pdf」</p><p>当然其他类型文件也是一样道理，比如：</p><ul><li>filetype:ppt</li><li>filetype:doc</li></ul><p><img src="https://mmbiz.qpic.cn/mmbiz_png/2KTof9YshwcMslzt0HH4U6zzh93aVxTFjyDoCiaCthpic5liaFNTqYt8tOAjfYvEHDOFVSsjY9FArQBt9lf9ZWTWg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p><h3 id="9、搜索图书"><a href="#9、搜索图书" class="headerlink" title="9、搜索图书"></a><strong>9、搜索图书</strong></h3><p>如果你想搜索一本图书怎么办，指向性很强，<strong>可以使用「《》」，比如：搜索 《如何成为学习高手》</strong></p><p><img src="https://raw.githubusercontent.com/chaozuoxitong123/tuchuang/main/img202211241754945.png" alt="图片"></p><h3 id="10、限定时间范围"><a href="#10、限定时间范围" class="headerlink" title="10、限定时间范围"></a><strong>10、限定时间范围</strong></h3><p>如果想在指定时间之后，可以在搜索词后面拼接 「after:2021」</p><p>如果想在指定时间之前，后面拼接 「before:2021」</p><p>如果想在一段时间区间内，后面拼接「in 2020….2021」</p><p><img src="https://raw.githubusercontent.com/chaozuoxitong123/tuchuang/main/img202211241754735.png" alt="图片"></p><h3 id="-1"><a href="#-1" class="headerlink" title=""></a></h3><h3 id="11、寻找替代网站"><a href="#11、寻找替代网站" class="headerlink" title="11、寻找替代网站"></a><strong>11、寻找替代网站</strong></h3><p>想要知道与某个网站相关的网站还有哪些？<strong>可以使用 「related:网站」，比如  related:github.com</strong></p><p>搜索引擎会为你列出许多相似的网站</p><p><img src="https://raw.githubusercontent.com/chaozuoxitong123/tuchuang/main/img202211241754472.png" alt="图片"></p><p>最后，我们赶上一个好时代，强大的互联网为了我们创造了海量的资料，我相信任何资料网上查到。但是如果成为这个淘金人却是我们需要去思考的。</p><p>工欲善其事必先利其器，掌握了技巧，你的工作效率会更好。时间就是生命，你把节省下来的时间用在其他地方，收获更多的成长</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>搜索方法</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>蓝桥杯2019JavaA组试题</title>
+    <link href="/2022/11/22/%E8%93%9D%E6%A1%A5%E6%9D%AF2019JavaA%E7%BB%84%E8%AF%95%E9%A2%98/"/>
+    <url>/2022/11/22/%E8%93%9D%E6%A1%A5%E6%9D%AF2019JavaA%E7%BB%84%E8%AF%95%E9%A2%98/</url>
+    
+    <content type="html"><![CDATA[<h3 id="A-平方和"><a href="#A-平方和" class="headerlink" title="A 平方和"></a>A 平方和</h3><p>【问题描述】<br>小明对数位中含有 2、0、1、9 的数字很感兴趣，在 1 到 40 中这样的数包括 1、2、9、10 至 32、39 和 40，共 28 个，他们的和是 574，平方和是 14362。注意，平方和是指将每个数分别平方后求和。请问，在 1 到 2019 中，所有这样的数的平方和是多少？</p><figure><div class="code-wrapper"><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> pingfanhe <span class="token punctuation">&#123;</span>    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>        <span class="token keyword">long</span> ans <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">2019</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">check</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>                ans <span class="token operator">=</span> i <span class="token operator">*</span> i<span class="token punctuation">;</span>            <span class="token punctuation">&#125;</span>        <span class="token punctuation">&#125;</span>        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>ans<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">&#125;</span>    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">boolean</span> <span class="token function">check</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>        <span class="token keyword">while</span> <span class="token punctuation">(</span>n <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>            <span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token operator">%</span> <span class="token number">10</span> <span class="token operator">==</span> <span class="token number">2</span> <span class="token operator">||</span> n <span class="token operator">%</span> <span class="token number">10</span> <span class="token operator">==</span> <span class="token number">0</span> <span class="token operator">||</span> n <span class="token operator">%</span> <span class="token number">10</span> <span class="token operator">==</span> <span class="token number">1</span> <span class="token operator">||</span> n <span class="token operator">%</span> <span class="token number">10</span> <span class="token operator">==</span> <span class="token number">9</span><span class="token punctuation">)</span>                <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>            n <span class="token operator">/=</span> <span class="token number">10</span><span class="token punctuation">;</span>        <span class="token punctuation">&#125;</span>        <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>    <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure><h3 id="B-数列求值"><a href="#B-数列求值" class="headerlink" title="B 数列求值"></a>B 数列求值</h3><p>【问题描述】<br>给定数列 1, 1, 1, 3, 5, 9, 17, …，从第 4 项开始，每项都是前 3 项的和。求第 20190324 项的最后 4 位数字。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>蓝桥杯</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>javaweb项目启动奇怪的错误</title>
     <link href="/2022/11/22/javaweb%E9%A1%B9%E7%9B%AE%E5%90%AF%E5%8A%A8%E5%A5%87%E6%80%AA%E7%9A%84%E9%94%99%E8%AF%AF/"/>
     <url>/2022/11/22/javaweb%E9%A1%B9%E7%9B%AE%E5%90%AF%E5%8A%A8%E5%A5%87%E6%80%AA%E7%9A%84%E9%94%99%E8%AF%AF/</url>
